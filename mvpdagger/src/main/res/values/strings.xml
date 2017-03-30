@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">mvpdagger</string>
+    <string name="tips_no_data_filter_house">当前筛选下没有符合条件的房源，\\n重新筛选看看</string>
+    <string name="house_no_result">暂时没有数据哦~</string>
+    <string name="xf_consult">在线咨询</string>
+    <string name="call_now">私密通话</string>
+    <string name="search">搜索</string>
+    <string name="input_hint">请输入关键字</string>
+    <string name="input_prefill"/>
+    <string name="douban_book">豆瓣图书</string>
+</resources>

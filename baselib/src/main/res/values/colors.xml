@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_ff611b">#ff611b</color>
+    <color name="text_02">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="text_04">#f25824</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg_02">#eeeeee</color>
+    <color name="bt_01_normal">#FF611B</color>
+</resources>

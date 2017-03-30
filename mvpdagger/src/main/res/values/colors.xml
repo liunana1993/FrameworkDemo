@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_D8D8D8">#d8d8d8</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_EF3E4A">#ef3e4a</color>
+    <color name="color_FC4343">#fc4343</color>
+    <color name="diver_normal">#eeeeee</color>
+
+    <color name="tag1">#FFF4DB</color>
+    <color name="tag2">#FFF3EB</color>
+    <color name="tag3">#FFF0EC</color>
+    <color name="tag4">#EDF6FF</color>
+    <color name="tag5">#F1F5FF</color>
+    <color name="tag6">#F3F1FF</color>
+    <color name="tag7">#F6F0FF</color>
+    <color name="tag8">#FBEEFC</color>
+    <color name="tag9">#FBEEFF</color>
+
+    <color name="tag_text1">#C89B35</color>
+    <color name="tag_text2">#FD8746</color>
+    <color name="tag_text3">#F18282</color>
+    <color name="tag_text4">#5EAEFD</color>
+    <color name="tag_text5">#7E8FD1</color>
+    <color name="tag_text6">#8C85E6</color>
+    <color name="tag_text7">#9973DD</color>
+    <color name="tag_text8">#A574D1</color>
+    <color name="tag_text9">#BB75D9</color>
+
+    <color name="app_orange">#FF611B</color>
+    <color name="color_ff9934">#ff9934</color>
+    <color name="bg_01">#F5F5F5</color>
+    <color name="text_09">#999999</color>
+    <color name="text_01">#333333</color>
+
+    <color name="line_grey">#8496a0</color>
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#00897b</color>
+    <color name="primary_light">#B2DFDB</color>
+    <color name="accent">#ffb74d</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="light_grey">#E8E8E8</color>
+    <color name="white">#ffffff</color>
+
+    <color name="window_background">#FFF5F5F5</color>
+    <color name="tab_bgcolor">#eeeeee</color>
+
+    <color name="google_red">#d62d20</color>
+    <color name="google_blue">#0057e7</color>
+    <color name="google_green">#008744</color>
+    <color name="google_yellow">#ffa700</color>
+</resources>

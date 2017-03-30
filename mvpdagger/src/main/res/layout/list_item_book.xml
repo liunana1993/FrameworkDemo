@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="com.mico.framework.mvpdagger.utils.ImageLoader"/>
+        <variable
+            name="item"
+            type="com.mico.framework.mvpdagger.model.Book"/>
+    </data>
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        android:foreground="?attr/selectableItemBackground"
+        >
+        <LinearLayout
+            style="@style/CardView.Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_book"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/book_default"
+                app:imageUrl="@{item.image}"
+                app:error="@{@drawable/book_default}"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/primary_text"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:text="@{item.title}"/>
+                <TextView
+                    android:id="@+id/tv_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/textSize_12sp_xf"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:text="@{item.author[0]}"/>
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/secondary_text"
+                    android:lines="3"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/textSize_14sp_xf"
+                    android:text="@{item.summary}"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>

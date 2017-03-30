@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_02"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/noDataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-15dp"
+        android:drawablePadding="15dp"
+        android:drawableTop="@drawable/xf_ic_no_house_result"
+        android:gravity="center"
+        android:text="Oops！数据好像迷路了\n点击刷新看看~"
+        android:textColor="@color/text_02"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/refresh"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_loadfail_refresh"
+        android:gravity="center"
+        android:text="点击刷新"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_notify"
+        android:background="@drawable/bg_circle_f25824_bigradius"
+        android:layout_marginTop="12dp"
+        android:text="点这里 意向房源优先通知你"
+        android:visibility="gone"
+        android:paddingRight="17dp"
+        android:paddingLeft="17dp"
+        android:singleLine="true"
+        android:textColor="@color/color_ff611b"
+        android:textSize="@dimen/textSize_17sp_xf"
+        android:layout_height="40dp" />
+</LinearLayout>
