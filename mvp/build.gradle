@@ -1,15 +1,20 @@
-apply plugin: 'com.android.application'
+if (isDebug.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.mico.framework"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         javaCompileOptions {
@@ -17,8 +22,8 @@ android {
                 arguments = [moduleName: project.getName()]
             }
         }
-    }
 
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -39,6 +44,19 @@ android {
     dataBinding {
         enabled = true
     }
+
+    sourceSets {
+        main {
+            if (isDebug.toBoolean()) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+                java {
+                    exclude 'debug/**'
+                }
+            }
+        }
+    }
 }
 
 dependencies {
@@ -47,11 +65,20 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    testCompile 'junit:junit:4.12'
+    compile project(':baselib')
 
-    //arouter
+
+    //test
+    
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.7@aar') {
+        transitive = true
+    }
     compile 'com.alibaba:arouter-api:1.0.7'
+    compile 'com.google.dagger:dagger:2.5'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.robolectric:robolectric:3.2.2'
+    testCompile 'org.mockito:mockito-core:1.10.19'
     annotationProcessor 'com.alibaba:arouter-compiler:1.0.3'
-    compile project(':mvp')
-    compile project(':modlue2')
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.5'
 }

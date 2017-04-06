@@ -1,1 +1,6 @@
-include ':app', ':baselib', ':mvpdagger'
+//include ':app'
+include ':baselib'
+include ':mvp'
+include ':modlue2'
+
+
