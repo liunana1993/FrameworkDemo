@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import com.mico.framework.baselib.base.App;
 import com.mico.framework.baselib.exception.InitException;
 
 import java.util.Map;
@@ -28,6 +29,7 @@ public class NetManager {
     private static Interceptor mCacheInterceptor;
 
     private NetManager() {
+        mContext = App.INSTANCE;
         // 创建Retrofit,初始化部分设置
         mBuilder = new Retrofit.Builder()
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FrameworkDemo.iml" filepath="$PROJECT_DIR$/FrameworkDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baselib/baselib.iml" filepath="$PROJECT_DIR$/baselib/baselib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mvpdagger/mvpdagger.iml" filepath="$PROJECT_DIR$/mvpdagger/mvpdagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modlue2/modlue2.iml" filepath="$PROJECT_DIR$/modlue2/modlue2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvp/mvp.iml" filepath="$PROJECT_DIR$/mvp/mvp.iml" />
     </modules>
   </component>
 </project>

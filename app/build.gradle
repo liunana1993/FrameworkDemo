@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion this.compileSdkVersion
+    buildToolsVersion this.buildToolsVersion
 
     defaultConfig {
         applicationId "com.mico.framework"
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode rootProject.ext.android.versionCode
-        versionName rootProject.ext.android.versionName
+        minSdkVersion this.minSdkVersion
+        targetSdkVersion this.targetSdkVersion
+        versionCode this.versionCode
+        versionName this.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         javaCompileOptions {
@@ -17,6 +17,7 @@ android {
                 arguments = [moduleName: project.getName()]
             }
         }
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -47,10 +48,10 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile project(':mvpdagger')
     testCompile 'junit:junit:4.12'
 
     //arouter
-    compile 'com.alibaba:arouter-api:1.0.7'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.0.3'
+    annotationProcessor 'com.alibaba:arouter-compiler:' + arouterCompiler
+    compile project(':mvp')
+    compile project(':modlue2')
 }
