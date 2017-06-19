@@ -6,14 +6,14 @@ if (isDebug.toBoolean()) {
 
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion this.compileSdkVersion
+    buildToolsVersion this.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode rootProject.ext.android.versionCode
-        versionName rootProject.ext.android.versionName
+        minSdkVersion this.minSdkVersion
+        targetSdkVersion this.targetSdkVersion
+        versionCode this.versionCode
+        versionName this.versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -66,19 +66,14 @@ dependencies {
     })
 
     compile project(':baselib')
-
-
-    //test
     
     compile('com.github.afollestad.material-dialogs:core:0.8.5.7@aar') {
         transitive = true
     }
-    compile 'com.alibaba:arouter-api:1.0.7'
     compile 'com.google.dagger:dagger:2.5'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     testCompile 'org.robolectric:robolectric:3.2.2'
     testCompile 'org.mockito:mockito-core:1.10.19'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.0.3'
+    annotationProcessor 'com.alibaba:arouter-compiler:' + arouterCompiler
     annotationProcessor 'com.google.dagger:dagger-compiler:2.5'
 }

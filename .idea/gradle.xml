@@ -8,9 +8,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baselib" />
-            <option value="$PROJECT_DIR$/mvpdagger" />
+            <option value="$PROJECT_DIR$/modlue2" />
+            <option value="$PROJECT_DIR$/mvp" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -3,14 +3,20 @@
           package="com.mico.framework.mvpdagger">
 
     <application
-        android:name="debug.CustomerApplication"
-        android:theme="@style/AppTheme">
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name="debug.CustomerApplication">
         <activity android:name=".activity.BookListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".activity.BookDetailActivity"
+                  android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

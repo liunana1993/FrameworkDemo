@@ -2,14 +2,13 @@ package com.mico.framework.mvpdagger.presenter.impl;
 
 import android.text.TextUtils;
 
+import com.mico.framework.baselib.util.CollectionUtils;
 import com.mico.framework.baselib.util.LogUtils;
 import com.mico.framework.baselib.util.RxUtils;
 import com.mico.framework.mvpdagger.fragment.IBookListView;
 import com.mico.framework.mvpdagger.interactor.IBookListInteractor;
 import com.mico.framework.mvpdagger.model.BookList;
 import com.mico.framework.mvpdagger.presenter.IBookListPresenter;
-
-import org.apache.commons.collections4.CollectionUtils;
 
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
